@@ -1,0 +1,9 @@
+# This is a basic workflow to help you get started with Actions
+diets<- read.csv(file.choose(),header=TRUE)
+
+shapiro.test(diets$Alcoholic_Beverages)
+#did it with all variables got same kind of result
+
+lm1=lm(diets$Deaths~diets$Animal_Products+diets$Animal_fats+diets$Aquatic_Products_Other+diets$Cereals_Excluding_Beer+diets$Eggs+ diets$Fish_Seafood+diets$Fruits_Excluding_Wine+ diets$Meat+ diets$Miscellaneous+ diets$Milk_Excluding_Butter+ diets$Offals+ diets$Oilcrops+diets$Pulses + diets$Spices + diets$Starchy_Roots + diets$Stimulants + diets$Treenuts + diets$Vegetal_Products+ diets$Vegetable_Oils+	diets$Vegetables+diets$Obesity)
+summary(lm1)
+
